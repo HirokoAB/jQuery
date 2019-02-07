@@ -1,0 +1,72 @@
+ body{
+    line-height: 1.0;
+    font-size: 14px;
+}
+
+.container{
+    padding:40px;
+
+}
+
+.q-box{
+    padding-top: 20px;
+    border:1px solid #66CCFF;
+    border-radius: 10px;
+    padding:50px 20px;
+    margin-bottom: 20px;
+}
+
+.q-box h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.description{
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.btn{
+    background-color: #ddd;
+    margin:2px;
+    display: inline-block;
+    color: #fff;
+    padding:10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor:pointer;
+}
+.btn-wrapper{
+    text-align: center;
+}
+
+/*サイズ変更*/
+.large-btn{
+    padding:15px 30px;
+}
+
+/*透明度変更用*/
+.opacity{
+    opacity: 0.5;
+}
+
+.box-wrappar{
+    height: 100px;
+    width: 200px;
+    text-align: center;
+    margin:20px auto;
+}
+
+.box{
+    width: 200px;
+    background-color: #66CCFF;
+    color:#fff;
+    line-height: 100px;
+    font-size: 20px;
+
+}
+
+
+
+
