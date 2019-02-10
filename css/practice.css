@@ -9,7 +9,7 @@ body{
 
 .q-box{
     padding-top: 20px;
-    border:1px soild #66ccff;
+    border:1px solid #66ccff;
     border-radius: 10px;
     padding-top: 50px 20px;
     margin-bottom:20px;
@@ -21,7 +21,7 @@ body{
 }
 
 .description{
-    margin-bottom: 30px;
+    margin-bottom: 38px;
     font-size:18px;
     line-height: 27px;
 }
