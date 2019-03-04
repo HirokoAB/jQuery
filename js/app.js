@@ -38,7 +38,7 @@ $('#js-add-btn2').on('click',function(){
 
 //toggleメニュー作るよ
 $('.js-toggle').on('click',function(){
-    $(this).toggleClass('on');
+    // $(this).toggleClass('on');
     $(this).siblings().slideToggle();
 });
 
@@ -60,10 +60,10 @@ $('.js-hamburger').on('mouseover mouseleave',function(){
 });
 
 //スムーズスクロール
-$('.js-scroll').on('click',function(){
-    $('body,html').animate({ scrollTop:0 }, 500);
-    console.log('hogehoge');
-});
+    $('.js-scroll').on('click',function(){
+        $('body,html').animate({ scrollTop:0 }, 500);
+        console.log('hogehoge');
+    });
 
 // //モーダルウィンドウ表示
 $('.js-modal').on('click',function(){
@@ -76,6 +76,90 @@ $('.js-modal-close').on('click',function(){
     $('#modal-bg').fadeOut(1000);
 
 });
+
+
+//タブメニュー作る
+
+//タブメニュー
+$('.tab-nav a').on('click',function(){
+　　if($(this).hasClass('active')) {
+    return false;
+    }
+    // console.log('test');
+    console.log(this.hash);
+
+
+    $('.tab-nav a').removeClass('active');
+    $(this).addClass('active');
+
+    $('.tab-content > div').removeClass('active');
+    $('.tab-content > div').filter(this.hash).addClass('active');
+});
+
+//スライダー
+//クラス.slideの要素の幅maeginは含まない
+let slideWidth = $('.slide').outerWidth();
+
+//.slideクラスがついているdivの数
+let slideNum = $('.slide').length;
+//
+let slideWrapperWidth = slideWidth * slideNum;
+
+let currentSlide = 0;
+$('slide-wrapper').css('widht'. slideWrapperWidth);
+
+
+//次へ
+$('.next-slider').on('click',function(){
+    //最後のスライドだった場合
+   if(currentSlide === slideNum -1){
+        return false;
+    }
+
+
+    currentSlide++; 
+    slide();
+
+});
+
+//前へ
+$('.prev-slider').on('click',function(){
+    //もし最初のスライドだったら処理停止
+     if(currentSlide === 0){
+        return false;
+    }
+
+    currentSlide--;
+    slide();
+});
+
+function slide(){
+    $('.slide-wrapper').stop().animate({
+        left: currentSlide * -slidewidth
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 });
